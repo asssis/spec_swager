@@ -1,12 +1,12 @@
 
-RSPEC + RSWAG
-    • Criando um projeto novo.
+## RSPEC + RSWAG
+### Criando um projeto novo.
 		`rails new spec_swagger  --api`
 
-    • Verificar application
+### Verificar application
               `config.api_only = true`
 
-    • Colocar as gens no projeto local.
+### Colocar as gens no projeto local.
   	 `gem 'rspec-rails'
   		gem 'rswag-api'
   		gem 'rswag-ui'
@@ -14,13 +14,13 @@ RSPEC + RSWAG
  	 	  gem 'rswag-specs'
   		gem 'faker'`
 
-    • Rodar o comando para atualizar o repositorio
+### Rodar o comando para atualizar o repositorio
               `bundle`
               
-    • Rodar o comando para construir o spec testes
+### Rodar o comando para construir o spec testes
               `rails generate rspec:install`
 
-    • Rodar o comando para constuir libs do swagger
+### Rodar o comando para constuir libs do swagger
               `rails g rswag:install`
 			
 			ou
@@ -31,15 +31,15 @@ RSPEC + RSWAG
 
 
 
-    • Gerar as migrations
+### Gerar as migrations
 
 		`rails g scaffold artigo titulo:string texto:string autor:string`
 		`rails g scaffold comentario texto:string qualificacao:integer nome:string artigo:references`
 
-    • Gerar tabelas no banco
+### Gerar tabelas no banco
 		`rails db:migrate`
 
-    • Gerar swager
+### Gerar swager
 		`rails generate rspec:swagger ArtigosController`
 		`rails generate rspec:swagger ComentariosController`
 
