@@ -1,19 +1,20 @@
 
 ## RSPEC + RSWAG
 ### Criando um projeto novo.
-		`rails new spec_swagger  --api`
+`rails new spec_swagger  --api`
 
 ### Verificar application
               `config.api_only = true`
 
 ### Colocar as gens no projeto local.
-  	 `gem 'rspec-rails'
-  		gem 'rswag-api'
-  		gem 'rswag-ui'
-  		gem 'rspec-rails'
- 	 	  gem 'rswag-specs'
-  		gem 'faker'`
-
+`
+gem 'rspec-rails'
+gem 'rswag-api'
+gem 'rswag-ui'
+gem 'rspec-rails'
+gem 'rswag-specs'
+gem 'faker'
+`
 ### Rodar o comando para atualizar o repositorio
               `bundle`
               
