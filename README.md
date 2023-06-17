@@ -1,24 +1,50 @@
-# README
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+RSPEC + RSWAG
+    • Criando um projeto novo.
+		`rails new spec_swagger  --api`
 
-Things you may want to cover:
+    • Verificar application
+              `config.api_only = true`
 
-* Ruby version
+    • Colocar as gens no projeto local.
+  	 `gem 'rspec-rails'
+  		gem 'rswag-api'
+  		gem 'rswag-ui'
+  		gem 'rspec-rails'
+ 	 	  gem 'rswag-specs'
+  		gem 'faker'`
 
-* System dependencies
+    • Rodar o comando para atualizar o repositorio
+              `bundle`
+              
+    • Rodar o comando para construir o spec testes
+              `rails generate rspec:install`
 
-* Configuration
+    • Rodar o comando para constuir libs do swagger
+              `rails g rswag:install`
+			
+			ou
 
-* Database creation
+		`rails g rswag:api:install
+		 rails g rswag:ui:install
+		 RAILS_ENV=test rails g rswag:specs:install`
 
-* Database initialization
 
-* How to run the test suite
 
-* Services (job queues, cache servers, search engines, etc.)
+    • Gerar as migrations
 
-* Deployment instructions
+		`rails g scaffold artigo titulo:string texto:string autor:string`
+		`rails g scaffold comentario texto:string qualificacao:integer nome:string artigo:references`
 
-* ...
+    • Gerar tabelas no banco
+		`rails db:migrate`
+
+    • Gerar swager
+		`rails generate rspec:swagger ArtigosController`
+		`rails generate rspec:swagger ComentariosController`
+
+
+`rake rswag:specs:swaggerize SWAGGER_DRY_RUN=0`
+
+
+`rake rswag:specs:swaggerize`
